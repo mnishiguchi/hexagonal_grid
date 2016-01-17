@@ -1,0 +1,132 @@
+<!doctype html>
+
+<html
+  lang="en"
+  ng-app="app"
+  ng-controller="AppController as app" >
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hexagonal grid</title>
+
+  <!-- Load Google fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <!-- Load Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha256-xWeRKjzyg6bep9D1AsHzUPEWHbWMzlRc84Z0aG+tyms= sha512-mGIRU0bcPaVjr7BceESkC37zD6sEccxE+RJyQABbbKNe83Y68+PyPM5nrE1zvbQZkSHDCJEtnAcodbhlq2/EkQ==" crossorigin="anonymous">
+  <!-- Load custom styles -->
+  <style>
+    html {
+      height: 100%;
+      -webkit-font-smoothing: antialiased;
+    }
+    body {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      background: #414042;
+    }
+    .wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding-bottom: 300px;
+      min-height: 100%;
+    }
+  </style>
+  <link rel="stylesheet" href="css/hex-grid.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+</head>
+
+
+<body>
+
+  <div class="wrapper">
+
+    <section class="hex-grid">
+
+      <div
+        ng-repeat="item in app.items"
+        class="grid-item repeat-animation">
+
+        <div class="inner">
+          <div
+            class="inner-inner"
+            ng-style="{ 'background-image': 'url({{ item.imgSrc }})' }">
+
+            <a
+              href=""
+              class="grid-info">
+
+              <div class ="inner-text">
+                <div class="inner-text-inner">
+
+                  <h2>{{ item.name }}</h2>
+                  <p>{{item.desc }}</p>
+
+                </div><!-- /.inner-text-inner -->
+              </div><!-- /.inner-text -->
+            </a><!-- /.grid-info -->
+          </div><!-- /.inner-inner -->
+        </div><!-- /.inner -->
+      </div><!-- /.grid-item -->
+    </section><!-- /.hex-grid -->
+
+  </div><!-- /.wrapper -->
+
+
+  <!-- Load Angular -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-animate.min.js"></script>
+  <!-- Load FakerJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.0.1/faker.min.js"></script>
+  <!-- Load app scripts -->
+  <script>
+    'use strict';
+
+    (function() {
+
+      /**
+       * Declares the app module.
+       */
+      angular
+        .module( 'app', [
+          'ngAnimate'
+        ]);
+
+
+      /**
+       * Manages app-wide scope.
+       */
+      angular
+        .module( 'app' )
+        .controller( 'AppController', AppController );
+
+        AppController.$inject = [];
+
+        function AppController() {
+
+          this.items = [];
+
+          // Create placeholder items.
+          for ( var i = 0; i < 30; i++ ) {
+
+            this.items.push({
+              name: faker.lorem.sentence(),
+              desc: faker.fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
+              imgSrc: "http://placehold.it/300/09f/fff.png?text=" + i
+            });
+
+          }
+        }
+
+    })(); // end module
+
+  </script>
+</body>
+</html>
