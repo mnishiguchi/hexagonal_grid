@@ -34,37 +34,10 @@
     margin: 0 -42%;
     margin-bottom: -25%;
   }
-  .hex-grid .grid-item:nth-child(2),
-  .hex-grid .grid-item:nth-child(4),
-  .hex-grid .grid-item:nth-child(6),
-  .hex-grid .grid-item:nth-child(8),
-  .hex-grid .grid-item:nth-child(10),
-  .hex-grid .grid-item:nth-child(12),
-  .hex-grid .grid-item:nth-child(14),
-  .hex-grid .grid-item:nth-child(16),
-  .hex-grid .grid-item:nth-child(18),
-  .hex-grid .grid-item:nth-child(20),
-  .hex-grid .grid-item:nth-child(22),
-  .hex-grid .grid-item:nth-child(24),
-  .hex-grid .grid-item:nth-child(26),
-  .hex-grid .grid-item:nth-child(28),
-  .hex-grid .grid-item:nth-child(30) {
+  .hex-grid .grid-item:nth-child(2n+2) {
     margin-top: 28%;
   }
-  .hex-grid .grid-item:nth-child(3),
-  .hex-grid .grid-item:nth-child(5),
-  .hex-grid .grid-item:nth-child(7),
-  .hex-grid .grid-item:nth-child(9),
-  .hex-grid .grid-item:nth-child(11),
-  .hex-grid .grid-item:nth-child(13),
-  .hex-grid .grid-item:nth-child(15),
-  .hex-grid .grid-item:nth-child(17),
-  .hex-grid .grid-item:nth-child(19),
-  .hex-grid .grid-item:nth-child(21),
-  .hex-grid .grid-item:nth-child(23),
-  .hex-grid .grid-item:nth-child(25),
-  .hex-grid .grid-item:nth-child(27),
-  .hex-grid .grid-item:nth-child(29) {
+  .hex-grid .grid-item:nth-child(2n+3) {
     clear: left;
   }
 }
@@ -74,27 +47,10 @@
     margin: 0 -29.2%;
     margin-bottom: -17.5%;
   }
-  .hex-grid .grid-item:nth-child(2),
-  .hex-grid .grid-item:nth-child(5),
-  .hex-grid .grid-item:nth-child(8),
-  .hex-grid .grid-item:nth-child(11),
-  .hex-grid .grid-item:nth-child(14),
-  .hex-grid .grid-item:nth-child(17),
-  .hex-grid .grid-item:nth-child(20),
-  .hex-grid .grid-item:nth-child(23),
-  .hex-grid .grid-item:nth-child(26),
-  .hex-grid .grid-item:nth-child(29) {
+  .hex-grid .grid-item:nth-child(3n+2) {
     margin-top: 19%;
   }
-  .hex-grid .grid-item:nth-child(4),
-  .hex-grid .grid-item:nth-child(7),
-  .hex-grid .grid-item:nth-child(10),
-  .hex-grid .grid-item:nth-child(13),
-  .hex-grid .grid-item:nth-child(16),
-  .hex-grid .grid-item:nth-child(19),
-  .hex-grid .grid-item:nth-child(22),
-  .hex-grid .grid-item:nth-child(25),
-  .hex-grid .grid-item:nth-child(28) {
+  .hex-grid .grid-item:nth-child(3n+4) {
     clear: left;
   }
 }
@@ -104,30 +60,10 @@
     margin: 0 -20.9%;
     margin-bottom: -12.5%;
   }
-  .hex-grid .grid-item:nth-child(2),
-  .hex-grid .grid-item:nth-child(4),
-  .hex-grid .grid-item:nth-child(6),
-  .hex-grid .grid-item:nth-child(8),
-  .hex-grid .grid-item:nth-child(10),
-  .hex-grid .grid-item:nth-child(12),
-  .hex-grid .grid-item:nth-child(14),
-  .hex-grid .grid-item:nth-child(16),
-  .hex-grid .grid-item:nth-child(18),
-  .hex-grid .grid-item:nth-child(20),
-  .hex-grid .grid-item:nth-child(22),
-  .hex-grid .grid-item:nth-child(24),
-  .hex-grid .grid-item:nth-child(26),
-  .hex-grid .grid-item:nth-child(28),
-  .hex-grid .grid-item:nth-child(30) {
+  .hex-grid .grid-item:nth-child(2n+2) {
     margin-top: 14%;
   }
-  .hex-grid .grid-item:nth-child(5),
-  .hex-grid .grid-item:nth-child(9),
-  .hex-grid .grid-item:nth-child(13),
-  .hex-grid .grid-item:nth-child(17),
-  .hex-grid .grid-item:nth-child(21),
-  .hex-grid .grid-item:nth-child(25),
-  .hex-grid .grid-item:nth-child(29) {
+  .hex-grid .grid-item:nth-child(4n+5) {
     clear: left;
   }
 }
